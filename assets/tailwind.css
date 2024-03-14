@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	[aria-label="content"] {
+		@apply my-10 w-full max-md:px-5 flex-wrap gap-6 justify-center flex flex-col lg:flex-row mx-auto items-center text-center font-bold;
+	}
+	.base-links {
+		@apply btn btn-ghost aria-selected:text-neutral-950 dark:aria-selected:text-neutral-50 aria-selected:bg-slate-950/20 dark:aria-selected:bg-slate-50/10 aria-selected:font-bold font-semibold rounded-sm;
+	}
+	.nav-links {
+		@apply base-links text-base;
+	}
+	.drawer-links {
+		@apply base-links m-0 w-full justify-start;
+	}
+}
