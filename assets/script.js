@@ -1,13 +1,66 @@
 // document.querySelectorAll("*").forEach(e=> {e.style.outline = 'grey 1px solid'})
+const splideImages = [
+	"./images/testimoni-1.jpeg",
+	// "./images/testimoni-2.jpg",
+	"./images/testimoni-3.png",
+	"./images/testimoni-4.jpeg",
+];
+const splides = () => {
+	var splide = new Splide(".splide", {
+		type: "loop",
+		drag: "free",
+		lazyLoad: "nearby",
+		autoWidth: true,
+		focus: "center",
+		heightRatio: 0.6,
+		gap: 5,
+		snap: true,
+		autoPlay: true,
+		breakpoints: {
+			640: {
+				heightRatio: 1,
+			},
+		},
+	});
+
+	splide.mount();
+	let container = document.querySelector("ul.splide__list");
+	if (container) {
+		splideImages.forEach((e) => {
+			splide.add(`<li class="splide__slide"><img src="${e}" alt="testimonial" /></li>`);
+		});
+	}
+	setTimeout(() => {
+		splide.go("<");
+	}, 100);
+};
+const animations = [];
+const refreshAnimations = () => {
+	animations.forEach((e) => {
+		e.scrollTrigger.refresh();
+	});
+};
 const AnimationFunction = () => {
 	gsap.registerPlugin(ScrollTrigger);
-	document.querySelectorAll(".animate-progress").forEach(e=> {
-		// gsap.to(e,{
-		// 	scrollTrigger:{
-
-		// 	}
-		// })
-	})
+	document.querySelectorAll(".animate-progress").forEach((e) => {
+		animations.push(
+			gsap.to(e, {
+				width: e.dataset.value + "%",
+				scrollTrigger: {
+					trigger: e,
+					start: "top bottom",
+					end: "top center+=200px",
+					scrub: 1,
+					steps: 10,
+					onUpdate: (e) => {
+						// console.log(e.progress);
+						e.trigger.firstElementChild.textContent = Math.round(e.progress * parseInt(e.trigger.dataset.value)) + "%";
+						e.trigger.firstElementChild.style.opacity = e.progress;
+					},
+				},
+			})
+		);
+	});
 	if (document.querySelectorAll("#splitText, .delimiter").length == 2) {
 		let splitText = document.querySelector("#splitText");
 		let delimiter = document.querySelector(".delimiter");
@@ -58,13 +111,14 @@ const AnimationFunction = () => {
 
 	const sectionArray = document.querySelectorAll("[aria-label='content']");
 	const sectionPosition = {};
-	const offset = document.querySelector(".navbar").offsetHeight
+	const offset = document.querySelector(".navbar").offsetHeight;
 	sectionArray.forEach((section) => (sectionPosition[section.id] = section.offsetTop));
 
 	window.onscroll = () => {
 		let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 		for (id in sectionPosition) {
 			if (sectionPosition[id] - offset <= scrollPosition) {
+				if (id != "about") refreshAnimations();
 				document.querySelectorAll("a[class*='-links'],a[class^='-links']").forEach((e) => {
 					e.ariaSelected = false;
 				});
@@ -87,6 +141,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	if (window.localStorage.getItem("theme") == "lightdim") {
 		document.querySelector("[data-toggle-theme]").checked = true;
 	}
+	splides();
 	AnimationFunction();
 	document.querySelector(`a[href="${window.location.hash}"`) && (document.querySelector(`a[href="${window.location.hash}"`).ariaSelected = true);
 });
@@ -107,7 +162,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 		window.location.replace(this.getAttribute("href"));
 		const targetId = this.getAttribute("href").substring(1);
 		const targetElement = document.getElementById(targetId);
-		let offset = document.querySelector(".navbar").offsetHeight * .9;
+		let offset = document.querySelector(".navbar").offsetHeight * 0.9;
 		window.scrollTo({
 			top: (targetElement ?? document.body).offsetTop - offset,
 			behavior: "smooth",

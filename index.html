@@ -8,6 +8,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portofolio</title>
+		<link rel="stylesheet" href="./assets/splide-4.1.3/splide-core.min.css" />
+		<link rel="stylesheet" href="./assets/splide-4.1.3/splide.min.css" />
+		<link rel="stylesheet" href="./assets/splide-4.1.3/themes/splide-default.min.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -48,29 +51,33 @@
 					</div>
 				</div>
 				<!-- Content -->
-				<div aria-colindex="1" aria-label="content" id="home" class="flex-col container lg:flex-row mx-auto items-center text-center pt-20 my-0 font-bold">
-					<div class="lg:w-[45%] md:w-4/5 flex flex-col gap-3">
-						<div class="text-start md:text-xl text-lg">Hallo disana!</div>
-						<div class="text-start lg:text-6xl md:text-4xl text-3xl py-1">Asep Widodo</div>
-						<div class="text-start md:text-2xl text-xl">
-							Saya adalah seorang <span id="splitText" class="underline underline-offset-[7.5px]"></span><span class="delimiter font-normal"></span>
+				<div aria-colindex="1" aria-label="content" class="mt-0 pt-10" id="home">
+					<div class="bg-base-100 w-full">
+						<div class="container-content mt-0 flex md:px-20 justify-between flex-wrap lg:flex-row items-center font-bold">
+							<div class="lg:w-[45%] md:w-4/5 flex flex-col gap-3">
+								<div class="text-start md:text-xl text-lg">Hallo disana!</div>
+								<div class="text-start lg:text-6xl md:text-4xl text-3xl py-1">Asep Widodo</div>
+								<div class="text-start md:text-2xl text-xl">
+									Saya adalah seorang <span id="splitText" class="underline underline-offset-[7.5px]"></span><span class="delimiter font-normal"></span>
+								</div>
+								<div class="text-start font-normal md:text-xl text-lg">
+									The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.
+								</div>
+							</div>
+							<div class="lg:w-[37.5%] md:w-4/5"><img class="max-w-" src="https://fakeimg.pl/640x720?font=bebas" alt="" /></div>
+							<div class="w-full grow justify-center">
+								<a href="#about-me" class="btn text-3xl btn-ghost btn-circle animate-bounce"><span class="z-0 icon-[ion--chevron-down]"></span></a>
+							</div>
 						</div>
-						<div class="text-start font-normal md:text-xl text-lg">
-							The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.
-						</div>
-					</div>
-					<div class="lg:w-[37.5%] md:w-4/5"><img class="max-w-" src="https://fakeimg.pl/640x720?font=bebas" alt="" /></div>
-					<div class="w-full grow justify-center">
-						<a href="#about-me" class="btn text-3xl btn-ghost btn-circle animate-bounce"><span class="z-0 icon-[ion--chevron-down]"></span></a>
 					</div>
 				</div>
 				<div aria-colindex="2" aria-label="content" id="about-me">
 					<div class="bg-base-300 w-full">
-						<div class="container max-md:p-5 mx-auto my-20">
-							<div class="w-full flex flex-col md:px-20 gap-[2px] mb-8">
-								<span class="w-fit text-3xl text-left">ABOUT ME</span>
-								<span class="divider py-0 my-0 w-10 divider-primary"></span>
-								<span class="font-normal text-lg w-fit text-left">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+						<div class="container-content">
+							<div class="section-head">
+								<span class="section-head-name">ABOUT ME</span>
+								<span class="section-head-divider"></span>
+								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
 							</div>
 							<div class="w-full flex md:px-20 lg:flex-row flex-col justify-center items-center gap-8">
 								<div class="bg-base-100 p-5 rounded shadow max-w-lg md:max-w-md relative">
@@ -147,18 +154,18 @@
 						</div>
 					</div>
 					<div class="bg-base-100 w-full">
-						<div class="container mx-auto my-20 flex flex-col">
-							<div class="w-full flex flex-col md:px-20 gap-[2px] mb-8">
-								<span class="w-fit text-3xl">MY SKILLS</span>
-								<span class="divider py-0 my-0 w-10 divider-primary"></span>
-								<span class="font-normal text-lg w-fit">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+						<div class="container-content flex flex-col">
+							<div class="section-head">
+								<span class="section-head-name">MY SKILLS</span>
+								<span class="section-head-divider"></span>
+								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
 							</div>
 							<div class="flex flex-wrap max-lg:gap-10 justify-between grow w-full md:px-20">
 								<div class="flex lg:w-[50%] w-full flex-col gap-5">
 									<div class="flex flex-col gap-2">
 										<div class="text-start">HTML</div>
 										<div class="relative shadow bg-base-content/5 rounded-full">
-											<div data-value="75" class="animate-progress bg-base-content w-0 py-1 rounded-full relative">
+											<div data-value="75" class="transition-all animate-progress bg-base-content w-0 py-1 rounded-full relative">
 												<div class="absolute -top-8 sm:right-2 right-5 font-normal">0%</div>
 											</div>
 										</div>
@@ -166,7 +173,7 @@
 									<div class="flex flex-col gap-2">
 										<div class="text-start">UI/UX</div>
 										<div class="relative shadow bg-base-content/5 rounded-full">
-											<div data-value="42" class="animate-progress bg-base-content w-0 py-1 rounded-full relative">
+											<div data-value="42" class="transition-all animate-progress bg-base-content w-0 py-1 rounded-full relative">
 												<div class="absolute -top-8 sm:right-2 right-5 font-normal">0%</div>
 											</div>
 										</div>
@@ -174,7 +181,7 @@
 									<div class="flex flex-col gap-2">
 										<div class="text-start">Wordpress</div>
 										<div class="relative shadow bg-base-content/5 rounded-full">
-											<div data-value="98" class="animate-progress bg-base-content w-0 py-1 rounded-full relative">
+											<div data-value="98" class="transition-all animate-progress bg-base-content w-0 py-1 rounded-full relative">
 												<div class="absolute -top-8 sm:right-2 right-5 font-normal">0%</div>
 											</div>
 										</div>
@@ -182,7 +189,7 @@
 									<div class="flex flex-col gap-2">
 										<div class="text-start">Magento</div>
 										<div class="relative shadow bg-base-content/5 rounded-full">
-											<div data-value="46" class="animate-progress bg-base-content w-0 py-1 rounded-full relative">
+											<div data-value="46" class="transition-all animate-progress bg-base-content w-0 py-1 rounded-full relative">
 												<div class="absolute -top-8 sm:right-2 right-5 font-normal">0%</div>
 											</div>
 										</div>
@@ -206,9 +213,175 @@
 						</div>
 					</div>
 				</div>
-				<div aria-colindex="3" aria-label="content" id="service" class="min-h-screen text-3xl bg-accent">Service</div>
-				<div aria-colindex="4" aria-label="content" id="project" class="min-h-screen text-3xl bg-sky-400">Project</div>
-				<div aria-colindex="5" aria-label="content" id="contact" class="min-h-screen text-3xl bg-orange-400">Contact</div>
+				<div aria-colindex="3" aria-label="content" id="service">
+					<div class="bg-base-300 w-full">
+						<div class="container mx-auto max-md:p-5 my-20 flex flex-col">
+							<div class="section-head">
+								<span class="section-head-name">MY SERVICES</span>
+								<span class="section-head-divider"></span>
+								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+							</div>
+							<div class="flex flex-wrap gap-10 justify-center grow w-full md:px-20">
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+								<div class="service-card group">
+									<div class="service-icon">
+										<div class="group-hover:border-base-300"><i class="icon-[mdi--facebook] group-hover:text-base-300"></i></div>
+									</div>
+									<div class="service-title group-hover:text-base-300">Unique design</div>
+									<div class="service-description group-hover:text-base-300">
+										I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="4" aria-label="content" id="project">
+					<div class="bg-base-100 w-full">
+						<div class="container-content flex flex-col">
+							<div class="w-full flex flex-col md:px-20 gap-[2px] mb-8">
+								<span class="w-fit text-3xl">Projects</span>
+								<span class="divider py-0 my-0 w-10 divider-primary"></span>
+								<span class="font-normal text-lg w-fit">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+							</div>
+							<div class="flex flex-wrap max-lg:gap-10 justify-between grow w-full md:gap-10 gap-5 md:px-20">
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+								<a
+									href="#"
+									class="card overflow-hidden group aspect-square lg:w-1/4 w-1/3 grow bg-transparent shadow-xl image-full before:!bg-transparent hover:before:!bg-neutral-900/80 before:transition-all"
+								>
+									<figure class="group-hover:scale-125 transition-all"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+									<div class="card-body items-center justify-center">
+										<h2 class="card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Our Photography</h2>
+										<p class="grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all">Design</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="bg-base-300 w-full">
+						<div class="container-content flex flex-col">
+							<div class="w-full flex flex-col md:px-20 gap-[2px] mb-8">
+								<span class="w-fit text-3xl">Testimonial</span>
+								<span class="divider py-0 my-0 w-10 divider-primary"></span>
+								<span class="font-normal text-lg w-fit">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+							</div>
+							<div class="flex flex-wrap max-lg:gap-10 justify-between grow w-full md:px-20">
+								<section class="splide" aria-label="Testimonial">
+									<div class="splide__track">
+										  <ul class="splide__list">
+										  </ul>
+									</div>
+								  </section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="5" aria-label="content" id="contact">
+					<div class="bg-base-100 w-full">
+						<div class="container mx-auto my-20 flex flex-col max-md:p-5">
+							<div class="w-full flex flex-col md:px-20 gap-[2px] mb-8">
+								<span class="w-fit text-3xl">GET IN TOUCH</span>
+								<span class="divider py-0 my-0 w-10 divider-primary"></span>
+								<span class="font-normal text-lg w-fit">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+							</div>
+							<div class="flex flex-wrap max-lg:gap-10 justify-between grow w-full md:px-20"></div>
+						</div>
+					</div>
+				</div>
 				<footer class="footer bg-neutral-900 dark:bg-neutral-300 text-base-100">
 					<div class="container p-5 mx-auto flex sm:justify-between items-center justify-center max-sm:flex-col">
 						<div class="flex gap-1">
@@ -255,6 +428,7 @@
 		</div>
 		<script src="./assets/gsap/gsap.min.js"></script>
 		<script src="./assets/gsap/ScrollTrigger.min.js"></script>
+		<script src="./assets/splide-4.1.3/splide.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 		<script src="assets/script.js"></script>
 	</body>
