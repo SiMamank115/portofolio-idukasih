@@ -1,7 +1,7 @@
 // document.querySelectorAll("*").forEach(e=> {e.style.outline = 'grey 1px 	solid'})
 const splideImages = [
 	"./images/testimoni-1.jpeg",
-	// "./images/testimoni-2.jpg",
+	"./images/testimoni-2.jpg",
 	"./images/testimoni-3.png",
 	"./images/testimoni-4.jpeg",
 ];
