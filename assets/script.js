@@ -1,4 +1,4 @@
-// document.querySelectorAll("*").forEach(e=> {e.style.outline = 'grey 1px solid'})
+// document.querySelectorAll("*").forEach(e=> {e.style.outline = 'grey 1px 	solid'})
 const splideImages = [
 	"./images/testimoni-1.jpeg",
 	// "./images/testimoni-2.jpg",

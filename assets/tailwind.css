@@ -7,7 +7,7 @@
 		@apply container max-md:p-5 mx-auto my-20;
 	}
 	[aria-label="content"] {
-		@apply my-10 w-full max-md:px-5 flex-wrap gap-6 justify-center flex flex-col lg:flex-row mx-auto items-center text-center font-bold;
+		@apply my-10 w-full flex-wrap gap-6 justify-center flex flex-col lg:flex-row mx-auto items-center text-center font-bold;
 	}
 	.base-links {
 		@apply btn btn-ghost aria-selected:text-neutral-950 dark:aria-selected:text-neutral-50 aria-selected:bg-slate-950/20 dark:aria-selected:bg-slate-50/10 aria-selected:font-bold font-semibold rounded-sm;
@@ -43,6 +43,27 @@
 		@apply divider py-0 my-0 w-10 divider-primary;
 	}
 	.section-head-description {
-		@apply font-normal text-lg w-fit;
+		@apply font-normal text-lg w-fit text-left;
+	}
+	.work-title {
+		@apply card-title -translate-x-5 opacity-0 text-neutral-100 group-hover:opacity-100 group-hover:translate-x-0 transition-all sm:text-xl text-base;
+	}
+	.work-description {
+		@apply grow-0 -translate-x-5 opacity-0 text-neutral-200 group-hover:opacity-100 group-hover:translate-x-0 transition-all delay-75 sm:text-base text-sm font-normal;
+	}
+	.contact-card {
+		@apply w-full flex bg-base-200 border-neutral/20 rounded-sm border shadow py-5 pe-5;
+	}
+	.contact-card-icon {
+		@apply p-4 flex flex-row justify-center;
+	}
+	.contact-card-content {
+		@apply grow text-left;
+	}
+	.contact-card-title {
+		@apply text-xl font-semibold;
+	}
+	.contact-card-description {
+		@apply text-lg font-normal;
 	}
 }
