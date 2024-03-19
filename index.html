@@ -41,6 +41,7 @@
 							<a aria-label="nav-link" href="#about-me" class="nav-links">About me</a>
 							<a aria-label="nav-link" href="#service" class="nav-links">Service</a>
 							<a aria-label="nav-link" href="#project" class="nav-links">Project</a>
+							<a aria-label="nav-link" href="#video" class="nav-links">Videos</a>
 							<a aria-label="nav-link" href="#contact" class="nav-links">Contact</a>
 							<label class="swap swap-rotate btn btn-ghost btn-circle">
 								<input type="checkbox" data-toggle-theme="dark,lightdim" data-act-class="ACTIVECLASS" />
@@ -56,7 +57,7 @@
 						<div class="container-content mt-0 flex md:px-20 justify-between flex-wrap lg:flex-row items-center font-bold">
 							<div class="lg:w-[45%] md:w-4/5 flex flex-col gap-3">
 								<div class="text-start md:text-xl text-lg">Hallo disana!</div>
-								<div class="text-start lg:text-6xl md:text-4xl text-3xl py-1">Asep Widodo</div>
+								<div class="text-start lg:text-6xl md:text-4xl text-3xl py-1">Syukron Eko</div>
 								<div class="text-start md:text-2xl text-xl">
 									Saya adalah seorang <span id="splitText" class="underline underline-offset-[7.5px]"></span><span class="delimiter font-normal"></span>
 								</div>
@@ -64,7 +65,9 @@
 									The namics of how users interact with interactive elements within a user interface flow chart based on container proportion.
 								</div>
 							</div>
-							<div class="lg:w-[37.5%] md:w-4/5"><img class="max-w-" src="https://fakeimg.pl/640x720?font=bebas" alt="" /></div>
+							<div class="lg:w-[37.5%] md:w-4/5 dark:brightness-[.6] brightness-90 hover:brightness-75 rounded transition overflow-hidden md:aspect-square">
+								<img src="./images/mas-eko.jpeg" alt="my photo" />
+							</div>
 							<div class="w-full grow justify-center">
 								<a href="#about-me" class="btn text-3xl btn-ghost btn-circle animate-bounce"><span class="z-0 icon-[ion--chevron-down]"></span></a>
 							</div>
@@ -80,8 +83,8 @@
 								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
 							</div>
 							<div class="w-full flex md:px-20 lg:flex-row flex-col justify-center items-center gap-8">
-								<div class="bg-base-100 p-5 rounded shadow max-w-lg md:max-w-md relative">
-									<img src="https://fakeimg.pl/640x640?font=bebas" alt="" />
+								<div class="bg-base-100 p-5 rounded shadow max-w-lg md:max-w-md relative aspect-square">
+									<img src="./images/mas-eko.jpeg" alt="" />
 									<div class="absolute rounded top-10 left-3 z-40 bg-base-100 flex flex-col p-2 gap-2">
 										<a href="#" class="btn btn-square btn-sm rounded-sm btn-primary border-none text-base-100"><span class="text-xl icon-[mdi--facebook]"></span></a>
 										<a href="#" class="btn btn-square btn-sm rounded-sm btn-primary border-none text-base-100"><span class="text-xl icon-[mdi--twitter]"></span></a>
@@ -381,8 +384,35 @@
 						</div>
 					</div>
 				</div>
-				<div aria-colindex="5" aria-label="content" id="contact">
+				<div aria-colindex="5" aria-label="content" id="video">
 					<div class="bg-base-100 w-full">
+						<div class="container-content flex flex-col">
+							<div class="section-head">
+								<span class="section-head-name">VIDEOS</span>
+								<span class="section-head-divider"></span>
+								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
+							</div>
+							<div class="flex flex-wrap gap-5">
+								<div class="lg:w-1/3 w-full grow max-w-4xl mx-auto overflow-hidden rounded shadow flex flex-col">
+									<div class="drop-shadow-lg md:text-xl text-lg font-normal text-left absolute z-30 px-5 py-3 text-neutral-100">Judul video 1</div>
+									<video id="my-video" controls preload="none">
+z										<source src="assets/video-mas-eko-min.mp4" type="video/mp4" />
+										<
+									</video>
+								</div>
+								<div class="lg:w-1/3 w-full grow max-w-4xl mx-auto overflow-hidden rounded shadow flex flex-col">
+									<div class="drop-shadow-lg md:text-xl text-lg font-normal text-left absolute z-30 px-5 py-3 text-neutral-100">Judul video 2</div>
+									<video id="my-video" controls preload="none">
+										<source src="assets/video-mas-eko-min-2.mp4" type="video/mp4" />
+										<source src="assets/video-mas-eko-min-2.webm" type="video/webm" />
+									</video>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="6" aria-label="content" id="contact">
+					<div class="bg-base-300 w-full">
 						<div class="container mx-auto my-20 flex flex-col max-md:p-5">
 							<div class="section-head">
 								<span class="section-head-name">GET IN TOUCH</span>
@@ -390,36 +420,38 @@
 								<span class="section-head-description">A LEAD UX & UI DESIGNER BASED IN CANADA</span>
 							</div>
 							<div class="flex flex-wrap gap-10 justify-between grow w-full md:px-20">
-								<form action="" class="grow w-1/3 flex flex-wrap gap-5 bg-base-200 shadow border border-neutral/20 p-5 rounded-sm">
+								<form action="" class="grow w-1/3 flex flex-wrap gap-5 bg-base-100 p-5 rounded-sm">
 									<input
 										type="text"
 										required
 										placeholder="Name *"
-										class="border-0 max-sm:w-full focus:border-primary focus:bg-base-100 bg-base-200 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-1/3 grow"
+										class="border-0 max-sm:w-full focus:border-primary focus:bg-base-200 bg-base-100 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-1/3 grow"
 									/>
 									<input
 										type="text"
 										required
 										placeholder="Email *"
-										class="border-0 focus:border-primary focus:bg-base-100 bg-base-200 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-1/3 grow"
+										class="border-0 focus:border-primary focus:bg-base-200 bg-base-100 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-1/3 grow"
 									/>
 									<input
 										type="text"
 										required
 										placeholder="Subject *"
-										class="border-0 focus:border-primary focus:bg-base-100 bg-base-200 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-full"
+										class="border-0 focus:border-primary focus:bg-base-200 bg-base-100 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary input rounded-sm w-full"
 									/>
 									<textarea
 										required
 										placeholder="Your Message *"
-										class="border-0 focus:border-primary focus:bg-base-100 bg-base-200 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary textarea rounded-sm w-full"
+										class="border-0 focus:border-primary focus:bg-base-200 bg-base-100 focus:outline-primary focus:shadow transition-all outline-2 outline-transparent outline-offset-2 border-b-2 border-primary textarea rounded-sm w-full"
 									></textarea>
 									<input type="submit" value="submit" class="btn btn-primary rounded-sm font-bold text-lg px-10" />
 								</form>
 								<div class="flex flex-col md:w-full lg:w-1/3 gap-5">
 									<div class="contact-card">
 										<div class="contact-card-icon">
-											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center"><span class="icon-[mdi--location] text-base-100"></span></div>
+											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center">
+												<span class="icon-[mdi--location] text-base-100"></span>
+											</div>
 										</div>
 										<div class="contact-card-content">
 											<div class="contact-card-title">Our Address</div>
@@ -428,7 +460,9 @@
 									</div>
 									<div class="contact-card">
 										<div class="contact-card-icon">
-											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center"><span class="icon-[mdi--location] text-base-100"></span></div>
+											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center">
+												<span class="icon-[mdi--location] text-base-100"></span>
+											</div>
 										</div>
 										<div class="contact-card-content">
 											<div class="contact-card-title">Our Address</div>
@@ -437,7 +471,9 @@
 									</div>
 									<div class="contact-card">
 										<div class="contact-card-icon">
-											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center"><span class="icon-[mdi--location] text-base-100"></span></div>
+											<div class="bg-primary aspect-square h-fit w-10 rounded-full flex justify-center items-center">
+												<span class="icon-[mdi--location] text-base-100"></span>
+											</div>
 										</div>
 										<div class="contact-card-content">
 											<div class="contact-card-title">Our Address</div>
@@ -486,6 +522,9 @@
 					</li>
 					<li>
 						<a onclick="closeSidebar()" href="#project" class="drawer-links"><span class="text-2xl icon-[solar--document-bold]"></span>Project</a>
+					</li>
+					<li>
+						<a onclick="closeSidebar()" href="#video" class="drawer-links"><span class="text-2xl icon-[ph--video-fill]"></span>Video</a>
 					</li>
 					<li>
 						<a onclick="closeSidebar()" href="#contact" class="drawer-links"><span class="text-2xl icon-[ic--round-phone]"></span>Contact</a>
