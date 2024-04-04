@@ -104,16 +104,14 @@ const AnimationFunction = () => {
 		}, duration[1]);
 	}
 
-	const sectionArray = document.querySelectorAll("[aria-label='content']");
-	const sectionPosition = {};
-	const offset = document.querySelector(".navbar").offsetHeight;
-	sectionArray.forEach((section) => (sectionPosition[section.id] = section.offsetTop));
-
-	window.onscroll = () => {
+	const updateNav = () => {
+		const sectionArray = document.querySelectorAll("[aria-label='content']");
+		const sectionPosition = {};
+		const offset = document.querySelector(".navbar").offsetHeight;
+		sectionArray.forEach((section) => (sectionPosition[section.id] = section.offsetTop - offset));
 		let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 		for (id in sectionPosition) {
-			if (sectionPosition[id] - offset <= scrollPosition) {
-				if (id != "about") refreshAnimations();
+			if (sectionPosition[id] <= scrollPosition) {
 				document.querySelectorAll("a[class*='-links'],a[class^='-links']").forEach((e) => {
 					e.ariaSelected = false;
 				});
@@ -123,6 +121,8 @@ const AnimationFunction = () => {
 			}
 		}
 	};
+	updateNav();
+	window.onscroll = updateNav;
 };
 
 document.addEventListener("DOMContentLoaded", (e) => {
