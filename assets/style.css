@@ -3913,6 +3913,11 @@ html:has(.drawer-toggle:checked) {
   width: 100%;
 }
 
+.min-w-fit {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -4153,6 +4158,10 @@ html:has(.drawer-toggle:checked) {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .text-left {
@@ -4398,6 +4407,10 @@ html:has(.drawer-toggle:checked) {
   .max-lg\:gap-10 {
     gap: 2.5rem;
   }
+
+  .max-lg\:pb-3 {
+    padding-bottom: 0.75rem;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -4529,6 +4542,10 @@ html:has(.drawer-toggle:checked) {
   }
 
   .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .lg\:w-1\/2 {
     width: 50%;
   }
 
